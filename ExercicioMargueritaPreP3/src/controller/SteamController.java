@@ -28,10 +28,13 @@ public class SteamController
 			while(linha != null)
 			{
 				String[] vetLinha = linha.split(",");
+				String[] vetLinha2 = linha.split("strInstructionsIT");
+				
 				
 				if(!(strInstructionsIT == null))
 				{
 					System.out.println(vetLinha[5]);
+					System.out.println(vetLinha2[5]);
 				}
 				linha = br.readLine();
 			}
@@ -90,8 +93,11 @@ public class SteamController
 		{
 			
 			String[] vetLinha = linha.split(",");
+			String[] vetLinha2 = linha.split("strInstructionsIT");
+			
 			if(!(strInstructionsIT == null)) {
 				sb.append(vetLinha[5]);
+				sb.append(vetLinha2[5]);
 			}
 			linha = br.readLine();
 				
@@ -112,12 +118,6 @@ public class SteamController
 		pw.close();
 		fw.close();
 	}
-	
-	
-	
-	
-	
-	
 	
 	
 }
