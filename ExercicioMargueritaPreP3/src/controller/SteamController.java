@@ -61,7 +61,7 @@ public class SteamController
 		File dir = new File(strInstructionsIT);
 		if(dir.exists() && dir.isDirectory())
 		{
-			File newArq = new File(dir, ARQ_STEAM);
+			File newArq = new File(dir, strInstructionsIT);
 			if(!newArq.exists())
 			{
 				bufferParaArquivo(sb, newArq);
@@ -82,7 +82,7 @@ public class SteamController
 	private StringBuffer arquivoParaBuffer(String strInstructionsIT)throws IOException
 	{
 		StringBuffer sb = new StringBuffer();
-		FileInputStream fis = new FileInputStream(ARQ_STEAM);
+		FileInputStream fis = new FileInputStream(strInstructionsIT);
 		InputStreamReader isr = new InputStreamReader(fis);
 		BufferedReader br = new BufferedReader(isr);
 		

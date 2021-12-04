@@ -8,12 +8,15 @@ public class Principal
 	{
 		SteamController sc = new SteamController();
 		
-		String strInstructionsIT = null;
+	//	String strInstructionsIT = "strInstructionsIT";
+		String arquivo = "marg.json";
+		String diretorio = "C:\\TEMP";
 		
-	
 		try 
 		{
-			sc.buscarInstrucaoItaliano(strInstructionsIT);
+			sc.gerarArquivo("C:\\Windows\\Temp");
+			sc.buscarInstrucaoItaliano("marg.json");
+			
 		} 
 		catch (Exception e) 
 		{
